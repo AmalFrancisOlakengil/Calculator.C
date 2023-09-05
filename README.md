@@ -4,6 +4,5 @@ A Technical Calculator made with C programming language.
 Features:
 1) Arithmetics
 2) Matrix Arithmetics
-3) Differential Calculus(functions)
-4) Solving Quadractic Equations
-5) More features are in development.
+3) Solving Quadractic Equations
+4) More features are in development.
