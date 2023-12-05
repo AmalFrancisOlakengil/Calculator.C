@@ -3,14 +3,14 @@
 
 int main()
 {
-    float decider, a_decider = 0;
+    int decider, a_decider = 0;
     int num[2];
     char op;
     int result;
     printf("welcome to the C Calculator!\n\nChoose any one:\nEnter \'1\' for Arithmetics\nEnter \'2\' for Matrix operations\nEnter \'3\' to solve Quadractic equations\n");
 
     printf("Enter your choice:");
-    scanf_s("%f", &decider);
+    scanf_s("%d", &decider);
 
     if (decider == 1) {
         printf("Enter your first number:");
@@ -18,7 +18,7 @@ int main()
         printf("Enter your second number:");
         scanf_s("%d", &num[1]);
         printf("Enter operator:");
-        scanf_s(" a%c", &op, 1);
+        scanf_s(" %c", &op, 1);
       
         switch (op) {
         case '+': printf("The result is: %d", num[0] + num[1]);
@@ -193,10 +193,10 @@ int main()
         printf("Consider Quadractic equation\nax^2+bx+c\n");
         printf("Enter a,b,c:\n");
         scanf_s("%f%f%f", &a, &b, &c);
-        decider = b * b - 4 * a * c;
+        float determinant = b * b - 4 * a * c;
 
-        if (decider >= 0) {
-            buffer = sqrt(decider);
+        if (determinant >= 0) {
+            buffer = sqrt(determinant);
             num[0] = (-b + buffer) / 2 * a;
             num[1]= (-b - buffer) / 2 * a;
             printf("The two roots are %d and %d\n", num[1], num[0]);
